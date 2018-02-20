@@ -1,0 +1,116 @@
+html, body {
+    background: #ffeead;
+}
+
+.App {
+  text-align: center;
+}
+
+/*
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+*/
+
+.container {
+    color: #ffeead;
+    font-size: 2em;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 2em 19em 2em;
+    grid-gap: 5px;
+    grid-template-areas:
+        "h"
+        "m"
+        "f";
+}
+
+.header {
+    padding: 10px;
+    background-color: #3f6cc1;
+
+    grid-area: h;
+}
+
+.main {
+
+    padding: 10px;
+    background-color: #88d8b0;
+
+    grid-area: m;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 5px;
+    grid-template-areas:
+        "mm mm mc mc mc mc";
+}
+
+.main .menu {
+
+    padding: 10px;
+
+    grid-area: mm;
+}
+
+.main .content {
+
+    padding: 10px;
+
+    grid-area: mc;
+}
+
+.main .menu:hover {
+
+    padding: 10px;
+    background-color: #ff6f69;
+
+    grid-area: mm;
+}
+
+.main .content:hover {
+    padding: 10px;
+    background-color: #ff6f69;
+
+    grid-area: mc;
+}
+
+.footer {
+    padding: 10px;
+    background-color: #3f6cc1;
+
+    grid-area: f;
+}
+
+@media screen and (max-width: 640px) {
+    .main {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 50% 50%;
+        grid-template-areas:
+            "mm"
+            "mc"
+    }
+}
